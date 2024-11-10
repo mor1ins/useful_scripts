@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Вывод сообщений с цветом для лучшей читаемости
+# Color output for better readability
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
-echo -e "${GREEN}Установка необходимых зависимостей для pyenv...${NC}"
+echo -e "${GREEN}Installing required dependencies for pyenv...${NC}"
 
-# Установка зависимостей для Ubuntu/Debian
+# Installing dependencies for Ubuntu/Debian
 if [ -f /etc/debian_version ]; then
     sudo apt-get update
     sudo apt-get install -y \
@@ -28,7 +28,7 @@ if [ -f /etc/debian_version ]; then
         python-openssl \
         git
 
-# Установка зависимостей для CentOS/RHEL/Fedora
+# Installing dependencies for CentOS/RHEL/Fedora
 elif [ -f /etc/redhat-release ]; then
     sudo yum install -y \
         gcc \
@@ -47,19 +47,19 @@ elif [ -f /etc/redhat-release ]; then
         xz-devel
 fi
 
-echo -e "${GREEN}Установка pyenv через pyenv-installer...${NC}"
+echo -e "${GREEN}Installing pyenv via pyenv-installer...${NC}"
 
-# Установка pyenv через pyenv-installer
+# Installing pyenv via pyenv-installer
 curl https://pyenv.run | bash
 
-# Настройка переменных окружения
+# Setting up environment variables
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 
-# Применение изменений
+# Applying changes
 source ~/.bashrc
 
-echo -e "${GREEN}Установка pyenv успешно завершена!${NC}"
-echo -e "${GREEN}Перезапустите терминал или выполните 'source ~/.bashrc' для применения изменений.${NC}"
+echo -e "${GREEN}pyenv installation completed successfully!${NC}"
+echo -e "${GREEN}Restart your terminal or run 'source ~/.bashrc' to apply changes.${NC}"

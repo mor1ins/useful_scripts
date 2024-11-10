@@ -2,43 +2,43 @@
 
 # useful_scripts
 
-Коллекция полезных скриптов для разработки.
+Collection of useful development scripts.
 
-## Установка pyenv (install_pyenv.sh)
+## pyenv Installation (install_pyenv.sh)
 
-Скрипт для автоматической установки pyenv и всех необходимых зависимостей. Поддерживает системы на базе Debian/Ubuntu и CentOS/RHEL/Fedora.
+Script for automatic installation of pyenv and all required dependencies. Supports Debian/Ubuntu and CentOS/RHEL/Fedora based systems.
 
-### Возможности скрипта:
-- Автоматическое определение типа операционной системы
-- Установка всех необходимых системных зависимостей
-- Установка pyenv через официальный установщик
-- Настройка переменных окружения
-- Поддержка цветного вывода для лучшей читаемости
+### Script Features:
+- Automatic operating system type detection
+- Installation of all necessary system dependencies
+- pyenv installation via official installer
+- Environment variables configuration
+- Colored output support for better readability
 
-### Использование:
-1. Сделайте скрипт исполняемым:
+### Usage:
+1. Make the script executable:
 ```bash
 chmod +x install_pyenv.sh
 ```
 
-2. Запустите скрипт:
+2. Run the script:
 ```bash
 ./install_pyenv.sh
 ```
 
-3. После установки перезапустите терминал или выполните:
+3. After installation, restart terminal or execute:
 ```bash
 source ~/.bashrc
 ```
 
-### Установленные компоненты:
+### Installed Components:
 - pyenv
 - pyenv-virtualenv
 - pyenv-update
 - pyenv-doctor
 - pyenv-which-ext
 
-### Системные зависимости
+### System Dependencies
 
 #### Debian/Ubuntu:
 - build-essential
@@ -71,32 +71,32 @@ source ~/.bashrc
 - libffi-devel
 - xz-devel
 
-## Установка AppImage (install_appimage.sh)
+## AppImage Installation (install_appimage.sh)
 
-Скрипт для удобной установки AppImage приложений в систему. Создает необходимые ярлыки и делает приложение доступным из командной строки.
+Script for convenient installation of AppImage applications into the system. Creates necessary shortcuts and makes the application available from the command line.
 
-### Возможности скрипта:
-- Перемещение AppImage в директорию ~/Applications
-- Создание символической ссылки в /usr/local/bin
-- Создание .desktop файла для отображения в меню приложений
-- Опциональное добавление иконки приложения
-- Автоматическое обновление кэша ярлыков
+### Script Features:
+- Moving AppImage to ~/Applications directory
+- Creating symbolic link in /usr/local/bin
+- Creating .desktop file for display in application menu
+- Optional application icon addition
+- Automatic shortcut cache update
 
-### Использование:
-1. Сделайте скрипт исполняемым:
+### Usage:
+1. Make the script executable:
 ```bash
 chmod +x install_appimage.sh
 ```
 
-2. Запустите скрипт, указав путь к AppImage файлу:
+2. Run the script specifying the path to AppImage file:
 ```bash
 ./install_appimage.sh /path/to/your/application.AppImage
 ```
 
-3. При запросе, можно указать путь к иконке приложения (опционально)
+3. When prompted, you can specify the path to the application icon (optional)
 
-### Результат установки:
-- AppImage файл будет перемещен в ~/Applications
-- Создастся команда в терминале с именем приложения
-- Приложение появится в меню GNOME
-- При указании иконки, она будет добавлена в ярлык приложения
+### Installation Results:
+- AppImage file will be moved to ~/Applications
+- A terminal command will be created with the application name
+- Application will appear in GNOME menu
+- If specified, the icon will be added to the application shortcut
